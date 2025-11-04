@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GoLink - Gerak Cepat, Hidup Jadi Mudah!</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header id="siteHeader" role="banner">
+    <div class="brand">
+      <div class="logo" aria-hidden="true">GL</div>
+      <h1>GoLink</h1>
+    </div>
+
+    <nav aria-label="Main navigation">
+      <a href="#fitur">Fitur</a>
+      <a href="#testimoni">Testimoni</a>
+      <a href="#download">Download</a>
+      <button class="cta" id="ctaTry" onclick="scrollToDownload()">Coba Sekarang</button>
+    </nav>
+
+    <button class="menu-btn" id="menuBtn" aria-label="Buka menu" aria-expanded="false">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+      <a href="#fitur" onclick="closeMobile()">Fitur</a>
+      <a href="#testimoni" onclick="closeMobile()">Testimoni</a>
+      <a href="#download" onclick="closeMobile()">Download</a>
+      <a class="cta" href="#download" onclick="closeMobile()">Coba Sekarang</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="hero-deco" aria-hidden="true"></div>
+
+    <section class="hero" aria-label="Hero">
+      <div class="hero-left">
+        <h2 class="fade-in stagger" data-delay="0" style="--delay:0ms">Gerak Cepat, Hidup Jadi Mudah — Semua dalam Satu Aplikasi</h2>
+        <p class="fade-in stagger" data-delay="80" style="--delay:80ms">Dari ojek sampai pesan makanan, paket, dan layanan rumah — GoLink hadir untuk mempermudah setiap aktivitas harianmu dengan cepat dan aman.</p>
+
+        <div class="download-group fade-in stagger" data-delay="160" style="--delay:160ms">
+          <button class="app-btn" onclick="scrollToDownload()"><i class="fa-brands fa-google-play"></i> Play Store</button>
+          <button class="app-btn secondary" onclick="scrollToDownload()"><i class="fa-brands fa-apple"></i> App Store</button>
+          <button class="ghost-btn" onclick="document.getElementById('fitur').scrollIntoView({behavior:'smooth'})">Lihat Fitur</button>
+        </div>
+
+        <div class="stats fade-in stagger" data-delay="240" style="--delay:240ms" aria-hidden="true">
+          <div class="stat"><b>4.9★</b> Pengguna puas</div>
+          <div class="stat"><b>1M+</b> Pesanan / Bulan</div>
+          <div class="stat"><b>3000+</b> Driver & Partner</div>
+        </div>
+      </div>
+
+      <div class="mockup" aria-hidden="true">
+        <div class="phone" id="phoneMock" role="img" aria-label="Mockup aplikasi GoLink">
+          <div class="screen">
+            <div>
+              <div style="display:flex;justify-content:space-between;align-items:center">
+                <div style="font-weight:700">GoLink</div>
+                <div style="font-size:12px;opacity:.95">Online</div>
+              </div>
+
+              <div class="card" style="margin-top:14px">
+                <div style="display:flex;justify-content:space-between;align-items:center">
+                  <div>
+                    <div style="font-weight:700">GoRide</div>
+                    <div class="small">Driver terdekat 3 menit</div>
+                  </div>
+                  <div style="font-size:22px">🛵</div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div style="display:flex;justify-content:space-between;align-items:center">
+                  <div>
+                    <div style="font-weight:700">GoFood</div>
+                    <div class="small">Makanan sampai cepat</div>
+                  </div>
+                  <div style="font-size:22px">🍔</div>
+                </div>
+              </div>
+            </div>
+
+            <div style="display:flex;justify-content:space-between;align-items:center;font-size:13px">
+              <div class="small">Estimasi: 10-20 menit</div>
+              <div style="font-weight:700">Bayar: e-wallet</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="fitur" class="features" aria-label="Fitur Unggulan">
+      <h2 class="fade-in stagger" data-delay="80" style="--delay:80ms;color:var(--primary);text-align:center">Layanan Unggulan</h2>
+
+      <div class="features-grid" style="margin-top:18px">
+        <article class="feature-card fade-in" tabindex="0" style="--delay:120ms">
+          <div class="badge">Terpopuler</div>
+          <div class="feature-icon"><i class="fa-solid fa-motorcycle"></i></div>
+          <h3>GoRide — Antar Cepat & Aman</h3>
+          <p>Pemesanan instan, GPS real-time, asuransi perjalanan, dan opsi berbagi biaya.</p>
+        </article>
+
+        <article class="feature-card fade-in" tabindex="0" style="--delay:180ms">
+          <div class="feature-icon" style="background:linear-gradient(135deg,#ff9a76,#ff7a59)"><i class="fa-solid fa-burger"></i></div>
+          <h3>GoFood — Ribuan Pilihan</h3>
+          <p>Pilihan restoran lengkap, estimasi waktu jelas, dan promo harian yang menguntungkan.</p>
+        </article>
+
+        <article class="feature-card fade-in" tabindex="0" style="--delay:240ms">
+          <div class="feature-icon" style="background:linear-gradient(135deg,#6ee7b7,#06b6d4)"><i class="fa-solid fa-box"></i></div>
+          <h3>GoSend — Kirim Kilat</h3>
+          <p>Kirim dokumen atau paket dengan jaminan sampai cepat dan pelacakan detil.</p>
+        </article>
+
+        <article class="feature-card fade-in" tabindex="0" style="--delay:300ms">
+          <div class="feature-icon" style="background:linear-gradient(135deg,#7dd3fc,#60a5fa)"><i class="fa-solid fa-briefcase"></i></div>
+          <h3>GoService — Layanan On-Demand</h3>
+          <p>Teknisi & jasa profesional tersedia on-demand untuk perbaikan dan jasa rumah.</p>
+        </article>
+
+        <article class="feature-card fade-in" tabindex="0" style="--delay:360ms">
+          <div class="feature-icon" style="background:linear-gradient(135deg,#ffd166,#ff9a76)"><i class="fa-solid fa-shield-halved"></i></div>
+          <h3>Keamanan & Asuransi</h3>
+          <p>Verifikasi driver, tombol darurat, dan perlindungan asuransi untuk perjalanan & pengiriman.</p>
+        </article>
+
+        <article class="feature-card fade-in" tabindex="0" style="--delay:420ms">
+          <div class="feature-icon" style="background:linear-gradient(135deg,#a78bfa,#7c3aed)"><i class="fa-solid fa-wallet"></i></div>
+          <h3>Metode Pembayaran Fleksibel</h3>
+          <p>Dompet digital, kartu, dan bayar di tempat — semua terintegrasi untuk kenyamananmu.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="testimoni" class="testimoni" aria-label="Testimoni pengguna">
+      <h2 class="fade-in stagger" data-delay="80" style="--delay:80ms;color:var(--primary)">Kata Mereka</h2>
+      <div class="quote fade-in" style="margin-top:16px">“GoLink membuat aktivitas harian jadi praktis — driver cepat, makanan hangat sampai, dan paket selalu aman. Aplikasi yang wajib ada di ponsel!” — Rina, Jakarta</div>
+    </section>
+
+    <section id="download" style="text-align:center;padding:64px 6%;" aria-label="Download aplikasi">
+      <h2 style="color:var(--primary)">Yuk, GoLink-in Hidupmu Sekarang!</h2>
+      <p style="margin:14px auto;max-width:640px;color:var(--muted-text)">Download aplikasinya gratis dan nikmati layanan serba cepat langsung dari genggamanmu. Nikmati voucher & promo onboarding!</p>
+      <div style="display:flex;gap:12px;justify-content:center;margin-top:18px;flex-wrap:wrap">
+        <button class="app-btn" onclick="window.open('https://play.google.com/store/search?q=gojek&c=apps&hl=id', '_blank')"><i class="fa-brands fa-google-play"></i> Play Store</button>
+        <button class="app-btn secondary" onclick="window.open('https://apps.apple.com/id/app/gojek/id944875099?l=id', '_blank')"><i class="fa-brands fa-apple"></i> App Store</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="fcols">
+      <div>
+        <strong>© 2025 GoLink</strong>
+        <div class="meta" style="opacity:.95;margin-top:6px">Dibuat dengan seksama oleh <a href="#">THE 3</a></div>
+      </div>
+
+      <div style="display:flex;gap:12px;align-items:center">
+        <a href="#fitur">Fitur</a>
+        <a href="#testimoni">Testimoni</a>
+        <a href="#download">Download</a>
+        <div class="social" aria-hidden="true" style="margin-left:12px">
+          <a href="#" title="Twitter"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
